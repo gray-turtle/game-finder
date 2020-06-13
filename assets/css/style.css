@@ -5,3 +5,13 @@
   --seconday-color: #eb3800;
   --tertiary-color: #0072e5;
 }
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+}
+
+ul {
+  list-style: none;
+}
