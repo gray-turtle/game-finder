@@ -12,6 +12,16 @@ body {
   background-color: var(--main-bg-color);
 }
 
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
 ul {
   list-style: none;
 }
@@ -19,4 +29,8 @@ ul {
 header {
   background-image: url(../images/electric.jpg);
   padding: 20% 0 0 0;
+}
+
+nav {
+  background-color: var(--secondary-bg-color);
 }
