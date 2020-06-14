@@ -15,3 +15,8 @@ body {
 ul {
   list-style: none;
 }
+
+header {
+  background-image: url(../images/electric.jpg);
+  padding: 20% 0 0 0;
+}
