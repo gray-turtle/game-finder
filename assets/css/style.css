@@ -6,20 +6,16 @@
   --tertiary-color: #0072e5;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto Condensed', sans-serif;
   color: var(--main-color);
   background-color: var(--main-bg-color);
-}
-
-a {
-  text-decoration: none;
-  color: var(--main-color);
-}
-
-a:hover {
-  text-decoration: none;
-  color: var(--tertiary-color);
 }
 
 ul {
@@ -28,9 +24,20 @@ ul {
 
 header {
   background-image: url(../images/electric.jpg);
+  background-size: cover;
   padding: 20% 0 0 0;
 }
 
 nav {
   background-color: var(--secondary-bg-color);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: var(--tertiary-color);
 }
