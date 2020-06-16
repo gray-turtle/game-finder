@@ -12,6 +12,10 @@
   box-sizing: border-box;
 }
 
+.text-center {
+  text-align: center;
+}
+
 body {
   font-family: 'Roboto Condensed', sans-serif;
   color: var(--main-color);
@@ -26,10 +30,13 @@ header {
   background-image: url(../images/electric.jpg);
   background-size: cover;
   padding: 20% 0 0 0;
+  margin: 10px 10px 0 10px;
+  font-size: 30px;
 }
 
 nav {
   background-color: var(--secondary-bg-color);
+  font-size: 30px;
 }
 
 nav a {
