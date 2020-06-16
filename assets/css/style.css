@@ -2,7 +2,7 @@
   --main-bg-color: #000014;
   --secondary-bg-color: #fd2630;
   --main-color: #22f6fa;
-  --seconday-color: #eb3800;
+  --secondary-color: #eb3800;
   --tertiary-color: #0072e5;
 }
 
@@ -32,10 +32,11 @@ header {
   padding: 15% 0 0 0;
   margin: 0 10px 0 10px;
   font-size: 30px;
+  color: var(--seconday-color);
 }
 
 nav {
-  background-color: var(--secondary-bg-color);
+  background-color: var(--secondary-color);
   font-size: 30px;
   padding: 5px 0 5px 0;
 }
@@ -69,7 +70,7 @@ main {
 
 .card {
   flex: 0 0 auto;
-  background-color: var(--secondary-bg-color);
+  background-color: var(--secondary-color);
   transition: 0.3s;
   padding: 100px 60px 100px 60px;
   margin: 30px 40px 30px 40px;
