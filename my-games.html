@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
     <link rel="stylesheet" href="../game-finder/assets/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+    <link rel="stylesheet" href="./assets/css/my-games.css">
     <title>Game Finder</title>
 </head>
 
@@ -36,27 +37,18 @@
 
     <main>
         <h1 class="page-title">My Games</h1>
-        <p>Click the button below to add a new game!</p>
         <form id="game-form">
             <div class="form-group">
                 <input type="text" name="game-name" class="text-input" placeholder="Enter Game Name" />
             </div>
             <div class="form-group">
-                <select name="game-type" class="select-dropdown">
-                    <option value="">Pick a game type</option>
-                    <option value="Print">Print</option>
-                    <option value="Web">Web</option>
-                    <option value="Mobile">Mobile</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <button class="btn" id="save-game" type="submit" draggable="true">Add game</button>
+                <button class="btn" id="save-game" type="submit" draggable="true">Add Game</button>
             </div>
         </form>
         <div class="page-content" id="page-content">
             <section class="game-list-wrapper">
-                <h2 class="list-title">Games To Do</h2>
-                <ul class="game-list" id="games-to-do"></ul>
+                <h2 class="list-title">Wish List</h2>
+                <ul class="game-list" id="wish-list"></ul>
             </section>
             <section class="game-list-wrapper">
                 <h2 class="list-title">Games In Progress</h2>
