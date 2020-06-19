@@ -79,14 +79,14 @@ main {
 
 form {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
   }
   
   form input {
     outline: none;
     border: none;
     padding: 12px;
-    width: 100%;
+    width: 600px;
     font-size: 2.2rem;
     border: 2px solid var(--grey);
     border-radius: 12px;
@@ -94,8 +94,6 @@ form {
   
   form .form-group {
     margin: 10px 6px 10px 0;
-    display: flex;
-    justify-content: center;
   }
 
   .page-title {
