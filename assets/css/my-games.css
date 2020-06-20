@@ -20,11 +20,11 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     color: var(--main-color);
     background-color: var(--main-bg-color);
-    margin: 0;
+    /* margin: 0;
     padding: 0;
     display: flex;
     min-height: 100vh;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
 ul {
@@ -60,12 +60,12 @@ nav a:hover {
 
 main {
     background: var(--secondary-color);
-    padding: 30px 25px;
+    padding: 10px;
     border-bottom: 5px solid var(--main-color);
   }
   
-  main p {
-    color: var(--tertiary-color);
+  /* main p {
+    color: var(--main-color);
     margin: 5px 0 20px;
     font-size: 2rem;
   }
@@ -73,19 +73,20 @@ main {
   p,
   li {
     font-size: 1.6rem;
-  }
+    display: flex;
+    justify-content: center;
+  } */
 
 form {
     display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
   
   form input {
     outline: none;
     border: none;
     padding: 12px;
-    width: 100%;
+    width: 600px;
     font-size: 2.2rem;
     border: 2px solid var(--grey);
     border-radius: 12px;
@@ -93,7 +94,6 @@ form {
   
   form .form-group {
     margin: 10px 6px 10px 0;
-    flex: 1;
   }
 
   .page-title {
@@ -101,6 +101,8 @@ form {
     margin-bottom: 5px;
     margin-top: 0;
     font-size: 4.5rem;
+    display: flex;
+    justify-content: center;
   }
   
   .page-content {
@@ -118,8 +120,10 @@ form {
   }
   
   .list-title {
-    color: var(--secondary-color);
+    color: var(--main-color);
     font-size: 2.6rem;
+    display: flex;
+    justify-content: center;
   }
   
   .game-list {

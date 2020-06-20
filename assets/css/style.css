@@ -44,6 +44,7 @@ nav {
 nav a {
   text-decoration: none;
   color: var(--main-color);
+  font-size: 30px;
 }
 
 nav a:hover {
