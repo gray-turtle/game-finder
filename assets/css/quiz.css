@@ -1,6 +1,9 @@
 
 .start-quiz {
+    flex: 0 0 auto;
     background-color: #22f6fa;
+    
+
 }
 
 .answer-button {
