@@ -1,4 +1,15 @@
 
 .start-quiz {
+    flex: 0 0 auto;
     background-color: #22f6fa;
+    
+
+}
+
+.answer-button {
+    flex: 0 0 auto;
+    background-color: #22f6fa;
+    transition: 0.3s;
+    padding: 100px 60px 100px 60px;
+    margin: 30px 40px 30px 40px;
 }
