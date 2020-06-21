@@ -11,7 +11,7 @@ var btn3 = $("#C");
 var btn4 = $("#D");
 var header = $("#question-header");
 var answerSection = $("#answer-section")
-var answerArray = [];
+
  
 var gameData = function () {
     var apiURL = "https://api.rawg.io/api/games";
@@ -58,8 +58,8 @@ var generateQuestion0 = function() {
 
     btn1.on("click", function() {
         var Xbox = "Xbox"
+        console.log(answerArray);
         localStorage.setItem("Xbox", Xbox);
-    
         generateQuestion1();
     });
 
@@ -100,6 +100,7 @@ var generateQuestion1 = function () {
     btn1.on("click", function() {
         var Action = "Action";
         localStorage.setItem("Action",Action);
+        console.log(localStorage);
         generateQuestion2();
     });
 
@@ -153,3 +154,4 @@ var reDirect = function () {
 
 
 gameData();
+platformData();
