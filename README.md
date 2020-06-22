@@ -7,6 +7,6 @@ As a gamer, I want to be able to find new games to play based on my specific cri
 Languages used: HTML, CSS, Javascript, JQuery, AJAX, PureCSS, and the RAWG videogame database API.
 
 
-check it out [here!](https://gray-turtle.github.io/game-finder/index.html)
+check it out [here!](https://gray-turtle.github.io/game-finder/quiz.html)
 
 ![Screen Shot 2020-06-21 at 9 54 59 PM](https://user-images.githubusercontent.com/63439798/85247084-e6511400-b409-11ea-864a-6f98b3d4f666.png)
