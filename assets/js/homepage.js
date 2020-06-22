@@ -14,8 +14,14 @@ var cardGenerator = function(numberOfGames) {
   }
 }
 
-var getGames = function(game) {
-  var apiUrl = "https://api.rawg.io/api/games?genres=adventure&genres=indie";
+var getGames = function() {
+  var platformSelection = localStorage.getItem("");
+  var genreSelection = localStorage.getItem("");
+  var releaseSelection = localStorage.getItem("");
+
+  console.log(platformSelection, genreSelection, releaseSelection);
+
+  var apiUrl = "https://api.rawg.io/api/games?genres=" + genreSelection + "&platforms=";
   
   fetch(apiUrl).then(function(response) {
     if (response.ok) {
