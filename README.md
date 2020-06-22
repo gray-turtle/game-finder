@@ -8,3 +8,5 @@
 
 
 check it out [here!](https://gray-turtle.github.io/game-finder/index.html)
+
+![Screen Shot 2020-06-21 at 9 54 59 PM](https://user-images.githubusercontent.com/63439798/85247084-e6511400-b409-11ea-864a-6f98b3d4f666.png)
