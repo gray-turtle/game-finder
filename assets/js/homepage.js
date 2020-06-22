@@ -12,20 +12,35 @@ var cardGenerator = function(numberOfGames) {
     gameCards[i].id = "card" + i;
     cardWrapperEl.appendChild(gameCards[i]);
   }
-  console.log(gameCards);
+}
 
+var getGames = function(game) {
+  var apiUrl = "https://api.rawg.io/api/games?genres=adventure&genres=indie";
+  
+  fetch(apiUrl).then(function(response) {
+    if (response.ok) {
+      response.json().then(function(response) {
+        console.log(response);
+      });
+    } else {
+      alert("Error: " + response.statusText);
+    }
+  }).catch(function(error) {
+    alert("Unable to connect to database");
+  });
 }
 
 cardGenerator(5);
 
 gameCards.forEach(element => element.addEventListener("mouseover", function() {
-  console.log("boiiiiii");
   infoEl.classList = "text-center not-permanant";
   infoEl.innerText = "lorem ipsum ;dlkfha;slkdjfa;lskjdf;lsjdf;lkj;laskjg;lfkjg;ldkjgl;kasjaslkdfj";
 
   gameInfoEl.appendChild(infoEl);
-})); 
+}));
 
-//gameCards.addEventListener("mouseout", function(event) {
-//  infoEl.parentNode.removeChild(infoEl);
-//});
+gameCards.forEach(element => element.addEventListener("mouseout", function() {
+  infoEl.parentNode.removeChild(infoEl);
+}));
+
+getGames();
