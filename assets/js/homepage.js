@@ -3,11 +3,12 @@ var suggestionsEl = document.querySelector("#suggestions");
 var gameInfoEl = document.querySelector("#game-info");
 var infoEl = document.createElement("p");
 var gameCards = [];
+var gameNames = [];
 
 var cardGenerator = function(numberOfGames) {
   for (i = 0; i < numberOfGames; i++) {
     gameCards[i] = document.createElement("div");
-    gameCards[i].innerHTML = "<h3></h3>";
+    gameCards[i].innerHTML = "<h3>" + gameNames[i] + "</h3>";
     gameCards[i].classList = "card";
     gameCards[i].id = "card" + i;
     cardWrapperEl.appendChild(gameCards[i]);
@@ -15,18 +16,25 @@ var cardGenerator = function(numberOfGames) {
 }
 
 var getGames = function() {
-  var platformSelection = localStorage.getItem("");
-  var genreSelection = localStorage.getItem("");
-  var releaseSelection = localStorage.getItem("");
+  //var platformSelection = localStorage.getItem("Answer1");
+  //var genreSelection = localStorage.getItem("Answer2");
 
-  console.log(platformSelection, genreSelection, releaseSelection);
+  var platformSelection = "1";
+  var genreSelection = "adventure"
 
-  var apiUrl = "https://api.rawg.io/api/games?genres=" + genreSelection + "&platforms=";
+  console.log(platformSelection, genreSelection);
+
+  var apiUrl = "https://api.rawg.io/api/games?genres=" + genreSelection + "&parent_platforms=" + platformSelection;
   
   fetch(apiUrl).then(function(response) {
     if (response.ok) {
       response.json().then(function(response) {
         console.log(response);
+        for (i = 0; i < 20; i++ ) {
+          gameNames[i] = response.results[i].name;
+          console.log(gameNames[i]);
+        }
+        cardGenerator(20);
       });
     } else {
       alert("Error: " + response.statusText);
@@ -35,8 +43,6 @@ var getGames = function() {
     alert("Unable to connect to database");
   });
 }
-
-cardGenerator(5);
 
 gameCards.forEach(element => element.addEventListener("mouseover", function() {
   infoEl.classList = "text-center not-permanant";
