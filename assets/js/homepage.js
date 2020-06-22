@@ -4,6 +4,8 @@ var gameInfoEl = document.querySelector("#game-info");
 var infoEl = document.createElement("p");
 var gameCards = [];
 var gameNames = [];
+var gameIds = [];
+var gameDescriptions = [];
 
 var cardGenerator = function(numberOfGames) {
   for (i = 0; i < numberOfGames; i++) {
@@ -16,11 +18,8 @@ var cardGenerator = function(numberOfGames) {
 }
 
 var getGames = function() {
-  //var platformSelection = localStorage.getItem("Answer1");
-  //var genreSelection = localStorage.getItem("Answer2");
-
-  var platformSelection = "1";
-  var genreSelection = "adventure"
+  var platformSelection = localStorage.getItem("Answer1");
+  var genreSelection = localStorage.getItem("Answer2");
 
   console.log(platformSelection, genreSelection);
 
@@ -32,7 +31,7 @@ var getGames = function() {
         console.log(response);
         for (i = 0; i < 20; i++ ) {
           gameNames[i] = response.results[i].name;
-          console.log(gameNames[i]);
+          gameIds[i] = response.results[i].id;
         }
         cardGenerator(20);
       });
@@ -44,15 +43,39 @@ var getGames = function() {
   });
 }
 
-gameCards.forEach(element => element.addEventListener("mouseover", function() {
-  infoEl.classList = "text-center not-permanant";
-  infoEl.innerText = "lorem ipsum ;dlkfha;slkdjfa;lskjdf;lsjdf;lkj;laskjg;lfkjg;ldkjgl;kasjaslkdfj";
+//var describeGames = function() {
+//  var currentGame = gameIds[0];
 
-  gameInfoEl.appendChild(infoEl);
-}));
+//  var apiUrl = "https://api.rawg.io/api/games/{" + currentGame + "}?description";
 
-gameCards.forEach(element => element.addEventListener("mouseout", function() {
-  infoEl.parentNode.removeChild(infoEl);
-}));
+//  fetch(apiUrl).then(function(response) {
+//    if (response.ok) {
+//      response.json().then(function(response) {
+//        console.log(response);
+//        for (i = 0; i < 20; i++ ) {
+//          gameDescriptions[i] = response.description;
+//          currentGame += 1;
+//        }
+//      });
+//    } else {
+//      alert("Error: " + response.statusText);
+//    }
+//  }).catch(function(error) {
+//    alert("Unable to connect to database");
+//  });
+//}
+
+//describeGames();
+
+//gameCards.forEach(element => element.addEventListener("mouseover", function() {
+//  infoEl.classList = "text-center not-permanant";
+//  infoEl.innerText = gameDescriptions[0];
+
+//  gameInfoEl.appendChild(infoEl);
+//}));
+
+//gameCards.forEach(element => element.addEventListener("mouseout", function() {
+//  infoEl.parentNode.removeChild(infoEl);
+//}));
 
 getGames();

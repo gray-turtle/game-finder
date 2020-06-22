@@ -99,23 +99,23 @@ var generateQuestion1 = function () {
     btn8.append(genreOptions[3]);
 
     btn5.on("click", function() {
-        var action = "action";
-        localStorage.setItem("Answer2",JSON.stringify(action));
+        localStorage.setItem("Answer2", "action");
+        location.href = "../index.html";
     });
 
     btn6.on("click", function() {
-        var indie = "indie";
-        localStorage.setItem("Answer2",JSON.stringify(indie))
+        localStorage.setItem("Answer2", "indie")
+        location.href = "../index.html";
     });
 
     btn7.on("click", function() {
-        var adventure = "adventure";
-        localStorage.setItem("Answer2",JSON.stringify(adventure))
+        localStorage.setItem("Answer2", "adventure");
+        location.href = "./index.html";
     });
 
     btn8.on("click", function() {
-        var shooter = "shooter";
-        localStorage.setItem("Answer2",JSON.stringify(shooter))
+        localStorage.setItem("Answer2", "shooter");
+        location.href = "../index.html";
     });
 }
 
