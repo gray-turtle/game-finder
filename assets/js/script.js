@@ -100,22 +100,22 @@ var generateQuestion1 = function () {
 
     btn5.on("click", function() {
         localStorage.setItem("Answer2", "action");
-        location.href = "game-finder/index.html";
+        location.href = "index.html";
     });
 
     btn6.on("click", function() {
         localStorage.setItem("Answer2", "indie")
-        location.href = "game-finder/index.html";
+        location.href = "index.html";
     });
 
     btn7.on("click", function() {
         localStorage.setItem("Answer2", "adventure");
-        location.href = "game-finder/index.html";
+        location.href = "index.html";
     });
 
     btn8.on("click", function() {
         localStorage.setItem("Answer2", "shooter");
-        location.href = "game-finder/index.html";
+        location.href = "index.html";
     });
 }
 
